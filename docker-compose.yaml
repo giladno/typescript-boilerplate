@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      args:
+        - NODE_ENV=development
+    command: ./node_modules/.bin/nodemon -L --inspect=0.0.0.0:9229 ./src/index.ts
+    user: root
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3000:3000
+      - 9229:9229
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - .env

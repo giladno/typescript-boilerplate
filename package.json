@@ -1,0 +1,26 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "A typescript boilerplate",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint ./src --ext .ts",
+    "build": "rm -rf ./dist && tsc",
+    "start": "node ./dist/index.js",
+    "dev": "docker compose up --build --renew-anon-volumes --remove-orphans || true"
+  },
+  "keywords": [],
+  "author": "Gilad Novik <gilad@novik.ca>",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "@types/node": "^20.12.10",
+    "eslint": "^8.57.0",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.8.0"
+  }
+}
